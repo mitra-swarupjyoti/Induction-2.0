@@ -1,0 +1,20 @@
+<% provide(:title, "Sign in") %>
+<h3>Sign in</h3>
+
+
+  <div class="form-signin">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+    <%#= f.label :email %>
+    <%= f.text_field :email, placeholder: "Email" %>
+
+    <%#= f.label :password %>
+    <%= f.password_field :password, placeholder: "Password" %>
+
+    <%= f.submit "Log In", class: "btn btn-default btn-primary" %>
+    <% end %>
+
+    <p><%= link_to "Change Password", signup_path %></p>
+  </div>
+
+
